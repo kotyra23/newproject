@@ -1,0 +1,90 @@
+/* ============================================
+   ГЛОБАЛЬНЫЕ СТИЛИ ДЛЯ ТАБЛИЦ
+   ============================================ */
+
+/* Увеличиваем все отступы в таблицах */
+.md-typeset table {
+    display: table !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    width: 100% !important;
+    margin: 1.5em 0 !important;
+    padding: 0 !important;
+}
+
+.md-typeset table th {
+    background-color: #3f51b5 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 12px 20px !important;
+    border: none !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+}
+
+.md-typeset table td {
+    padding: 10px 20px !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    line-height: 1.6 !important;
+    white-space: nowrap !important;
+}
+
+/* Чередование цветов строк */
+.md-typeset table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9 !important;
+}
+
+.md-typeset table tbody tr:nth-child(even) {
+    background-color: #ffffff !important;
+}
+
+/* Эффект при наведении */
+.md-typeset table tbody tr:hover {
+    background-color: #f5f5f5 !important;
+}
+
+/* ============================================
+   УЛУЧШЕНИЯ ДЛЯ КОДА
+   ============================================ */
+
+.md-typeset code {
+    padding: 2px 6px !important;
+    background-color: #f0f0f0 !important;
+    border-radius: 3px !important;
+    font-size: 0.9em !important;
+}
+
+.md-typeset pre > code {
+    padding: 15px 20px !important;
+    display: block !important;
+    overflow-x: auto !important;
+    margin: 1em 0 !important;
+}
+
+/* ============================================
+   УЛУЧШЕНИЯ ЧИТАЕМОСТИ
+   ============================================ */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+    margin-top: 2em !important;
+    margin-bottom: 1em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.md-typeset p {
+    margin: 1em 0 !important;
+    line-height: 1.8 !important;
+}
+
+.md-typeset ul,
+.md-typeset ol {
+    margin: 1em 0 !important;
+    padding-left: 2em !important;
+}
+
+.md-typeset li {
+    margin: 0.5em 0 !important;
+    line-height: 1.6 !important;

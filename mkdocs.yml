@@ -13,7 +13,7 @@ theme:
     - content.tabs.link       # Синхронизация вкладо
 
 extra_css:
-  - assets/custom.css
+ - css/custom.css 
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -26,7 +26,11 @@ markdown_extensions:
 
 nav:
   - Главная: index.md
-
+  # 🐙 GIT
+  - Git:
+    - Основы: git/основы.md
+    - Ветвление: git/ветвление.md
+    - Продвинутый: git/продвинутый.md
   # ==========================================
   # 🐧 1. LINUX (Основы, Bash, Сети)
   # ==========================================

@@ -1,0 +1,25 @@
+/* Увеличиваем отступы в таблицах */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+    padding: 0.8em 1.2em;
+    white-space: nowrap;
+}
+
+/* Увеличиваем расстояние между колонками */
+.md-typeset table:not([class]) {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+/* Улучшаем читаемость заголовков таблиц */
+.md-typeset table:not([class]) th {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    padding: 1em 1.5em;
+}
+
+/* Делаем ячейки более просторными */
+.md-typeset table:not([class]) td {
+    padding: 0.7em 1.2em;
+    line-height: 1.6;
+}

@@ -1,0 +1,26 @@
+stages:
+  - lint
+  - test
+  - build
+  - abstract_test
+lint:
+ script:
+  - apt update && apt install -y shellcheck
+  - shellcheck scripts/clean_downloads.sh
+
+test:
+ script:
+  - mkdir -p /tmp/tests
+  - touch -d "1" /tmp/tests/file.txt
+  - bash scripts/clean_downloads.sh
+
+build:
+  script:
+  - chmod +x scripts/*.sh
+  
+abstract_test:
+  needs: [build]
+  script:
+   -echo "Запуск абстракции"
+
+

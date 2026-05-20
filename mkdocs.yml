@@ -19,11 +19,16 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
-  - admonition                # Блоки заметок (Note, Warning и т.д.)
-  - pymdownx.details          # Раскрывающиеся блоки
+  - admonition
+  - pymdownx.details
   - toc:
-      permalink: true         # Ссылки на заголовки
-
+      permalink: true
+  - attr_list                    # ✅ Для кнопок {.md-button}
+  - pymdownx.emoji:              # ✅ Для иконок :fontawesome-:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
 nav:
   - Главная: index.md
   # 🐙 GIT

@@ -1,4 +1,4 @@
-// Кнопка перевода - открывает Google Translate в новой вкладке
+// Простая кнопка перевода - открывает Google Translate в новой вкладке
 document.addEventListener('DOMContentLoaded', function() {
   const button = document.createElement('button');
   button.className = 'translate-floating-btn';

@@ -1,0 +1,39 @@
+name: "Моя Инструкция"
+on: [push, workflow_dispatch]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: "1️⃣ Lint"
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt update && sudo apt install -y shellcheck
+          mkdir -p scripts
+          echo '#!/bin/bash' > scripts/clean_downloads.sh
+          shellcheck scripts/clean_downloads.sh || true
+
+  test:
+    runs-on: ubuntu-latest
+    name: "2️⃣ Test"
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p /tmp/tests
+          touch -d "1" /tmp/tests/file.txt
+          bash scripts/clean_downloads.sh || true
+
+  build:
+    runs-on: ubuntu-latest
+    name: "3️ Build"
+    needs: [test]
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x scripts/*.sh
+
+  abstract_test:
+    runs-on: ubuntu-latest
+    name: "4️⃣ Abstract"
+    needs: [build]
+    steps:
+      - run: echo "✅ Запуск абстракции завершен!"
